@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header{
+            width: 100%;
+            background-color: rgba(20, 102, 255, 0.877);
+            float: left;
+            height: 170px;
+            margin-bottom: 20px;
+          
+        }
+      h1{
+        text-align: center;
+        color: white;
+      }
+      #nav{
+        background-color: rgba(121, 183, 255, 0.733);
+        padding: 10px;
+        float: left;
+        margin-left: 50px;
+        width: 90%;
+      }
+      .navi{
+        padding: 10px;
+        margin-left: 20px;
+        float: left;
+        background-color: rgba(0, 162, 255, 0.897);
+        padding-left: 105px;
+        padding-right: 105px;
+  
+      }
+      #box1{
+        background-color: rgb(154, 255, 193);
+        width: 20%;
+        height: 330px;
+        clear: both;
+        float: left;
+        margin-bottom: 20px;
+      }
+      #mylist{
+        list-style: none;
+      }
+      .list{
+        padding: 15px;
+        border-bottom: 1px solid gray ;
+        margin-right: 20px;
+        
+      }
+      #a{
+        margin-top: 10px;
+        margin-left: 40px;
+      }
+      #box2{
+        background-color: rgb(238, 238, 238);
+        width: 80%;
+        float: left;
+        height: 330px;
+        margin-bottom: 20px;
+      }
+      #box3{
+        background-color: pink;
+        width: 40%;
+        margin-left: 20px;
+        height: 170px;
+        float: left;
+      }
+      h2{
+        margin-left: 10px;
+      }
+      p{
+        margin-left: 10px;
+      }
+      #b{
+        margin-left: 10px;
+        margin-top: 20px;
+      }
+      .p{
+        margin-left: 10px;
+      }
+      #box4{
+        background-color: pink;
+        float: left;
+        margin-left: 40px;
+        width: 40%;
+      }
+      #c{
+        margin-left: 10px;
+        margin-top: 20px;
+      }
+      .q{
+        margin-left: 10px;
+      }
+       #box5{
+      background-color: bisque;
+      clear: both;
+      width: 100%;
+      height: 180px;
+     }
+     #d{
+      margin-left: 20px;
+      padding-top: 15px;
+     }
+     .r{
+      margin-left: 20px;
+     }
+     #box6{
+      background-color: rgba(34, 34, 255, 0.685);
+      width: 100%;
+      height: 50px;
+     }
+     .s{
+      text-align: center;
+      color: white;
+      padding-top: 20px;
+     }
+    
+        
+    </style>
+</head>
+<body>
+   <div id="container">
+    <div id="header">
+    <h1>Float-Based Web Layout</h1>
+    <div id="nav">
+    <div class="navi">Home</div>
+    <div class="navi">About</div>
+    <div class="navi">Services</div>
+    <div class="navi">Contact</div>
+    </div>
+    </div>
+      <div id="box1">
+        <h3 id="a">Sidebar</h3>
+        <ul id="mylist">
+          <li class="list">Menu Item 1</li>
+          <li class="list">Menu Item 2</li>
+          <li class="list">Menu Item 3</li>
+          <li class="list">Menu Item 4</li>
+          <li class="list">Menu Item 5</li>
+        </ul>
+      </div>
+      <div id="box2">
+        <h2>Main Content Area</h2>
+        <p>This layout is created using CSS float properties.The sidebar is floated left,and the main content is</p>
+        <p>floated right.</p>
+        <div id="box3">
+          <h3 id="b">Float Column 1</h3>
+          <p class="p">This column is floated left.Float was</p>
+          <p class="p">commonly used for layouts before Flexbox</p>
+          <p class="p">and CSS Grid.</p>
+          </div>
+          <div id="box4">
+          <h3 id="c">Float Column 2</h3>
+          <p class="q">This column is also floated left.Using float</p>
+          <p class="q">for layout requires careful clearing of floats.</p>
+          </div>
+        </div>
+        <div id="box5">
+          <h3 id="d">About Float Layouts</h3>
+          <p class="r">CSS float is a property that positions an element to the left or right of it's container,allowing text and inline elements to wrap around</p>
+          <p class="r">it.</p>
+          <p class="r">While float is still useful for wrapping text around images,it's no longer the preferred method for creating complex page layouts.</p>
+        </div>
+        <div id="box6">
+          <p class="s">© 2023 Float Layout Example.All rights reserved</p>
+
+        </div>
+        </div>
+        
+      
+</body>
+</html>
