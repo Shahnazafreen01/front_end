@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let marks = (prompt("Enter marks:"));
+        marks = Number(marks);
+
+        if(marks >= 90 && marks <= 100){
+            console.log("Grade = A+");
+            document.write("Grade = A+");
+
+        }else if(marks >= 80 && marks <= 89){
+            console.log("Grade = A");
+            document.write("Grade = A");
+
+        }else if(marks >= 70 && marks <= 79){
+            console.log("Grade = B+");
+            document.write("Grade = B+");
+
+        }else if(marks >= 60 && marks <= 69){
+            console.log("Grade = C");
+            document.write("Grade = C");
+
+        }else if(marks >= 50 && marks <= 59){
+            console.log("Grade = D");
+            document.write("Grade = D");
+
+        }else if(marks < 50 && marks >= 0){
+            console.log("Grade = FAIL");
+            document.write("Grade = FAIL");
+
+        }else{
+            console.log("Invalid Input! please enter marks between 0-100");
+            document.write("Invalid Input! please enter marks between 0-100");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = Number (prompt("Enter a number"));
+        let reverse = 0;
+        let remainder;
+        temp = n;
+
+        while (n > 0){
+        remainder = n % 10;
+        reverse = reverse * 10 + remainder;
+        n = (n / 10)|0;
+        }
+
+        if (temp == reverse){
+            console.log("yes",reverse)
+        }else{
+             console.log("no",reverse)
+        }
+
+        
+    
+
+
+    </script>
+</body>
+</html>
