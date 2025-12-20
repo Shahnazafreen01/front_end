@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest Calculator</title>
+</head>
+<body>
+     <!-- Simple Interest = P * R * T / 100
+     P = Principal
+     R = Rate of Interest(%) 
+    T = Time(years) -->
+    <script>
+        let principal = Number(prompt("Enter principal amount:"));
+        let rate = Number(prompt("Enter rate of interest (%):"));
+        let time = Number(prompt("Enter the time (years):"));
+
+        let SimpleInterest = (principal * rate * time) / 100;
+
+        document.write("Principal = " + principal+"<br>");
+        document.write("Rate = " + rate+"<br>");
+        document.write("Time = " + time+"<br>");
+        document.write("Simple Interest = " + SimpleInterest);
+    </script>
+</body>
+</html>
