@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age = Number (prompt("Enter your age:"));
+
+        if (age >= 18){
+        document.write("Eligible for Voting ");
+
+        }else{
+            let yearsleft = 18 - age;
+
+            document.write("Not Eligible for Voting" + "<br>");
+            document.write("Years Left: " + yearsleft);
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function operator(){
+         let num1 = Number (prompt("Enter the first number: "));
+        let num2 = Number (prompt("Enter the second number: "));
+        let operator = prompt("Enter an operator (+,-,*,/): ");
+
+        let result;
+
+        if (operator == '+'){
+            result = num1 + num2;
+            alert(result);
+
+        }else if (operator == '-'){
+            result = num1 - num2;
+            alert(result);
+
+        }else if (operator == '*'){
+            result = num1 * num2;
+            alert(result);
+
+        }else if (operator == '/'){
+            if (num2 != 0){
+            result = num1 / num2;
+            alert(result);
+            
+            }else {
+            result = "Error! Division by zero is not allowed.";
+            alert(result);
+        }
+
+        }else{
+            result = "Invalid operator!";
+            alert(result);
+        }
+    }
+
+     function oddEven(){
+           let num = (prompt("Enter a number:"));
+        num = Number(num);
+
+        if (num % 2 == 0){
+            console.log("Even")
+            document.write("Even");
+
+        }else{
+            console.log("Odd")
+            document.write("Odd");
+        }
+     }
+
+     function checkGrade(){
+         let marks = (prompt("Enter marks:"));
+        marks = Number(marks);
+
+        if(marks >= 90 && marks <= 100){
+            console.log("Grade = A+");
+            document.write("Grade = A+");
+
+        }else if(marks >= 80 && marks <= 89){
+            console.log("Grade = A");
+            document.write("Grade = A");
+
+        }else if(marks >= 70 && marks <= 79){
+            console.log("Grade = B+");
+            document.write("Grade = B+");
+
+        }else if(marks >= 60 && marks <= 69){
+            console.log("Grade = C");
+            document.write("Grade = C");
+
+        }else if(marks >= 50 && marks <= 59){
+            console.log("Grade = D");
+            document.write("Grade = D");
+
+        }else if(marks < 50 && marks >= 0){
+            console.log("Grade = FAIL");
+            document.write("Grade = FAIL");
+
+        }else{
+            console.log("Invalid Input! please enter marks between 0-100");
+            document.write("Invalid Input! please enter marks between 0-100");
+        }
+     }
+
+    function largernumber(){
+    let num1 = Number(prompt("Enter first number: "));
+    let num2 = Number(prompt("Enter second number: "));
+    let num3 = Number(prompt("Enter third number: "));
+
+    let largest;
+    
+    if(num1 >= num2 && num1 >= num3){
+        largest = num1;
+        
+
+    }else if(num2 >= num1 && num2 >= num3){
+        largest = num2;
+
+    }else{
+        largest = num3;
+    }
+    console.log("The largest number is:" +largest);
+    document.write("The largest number is:" +largest);
+}
+    function swapnumber(){
+    let x = 5;
+         x = Number(x);
+
+        let y = 6;
+         y = Number(y);
+
+        console.log("Before swap");
+        console.log("x",x)
+        console.log("y",y)
+
+        x = x + y;
+        y = x - y;
+        x = x - y;
+
+        console.log("After Swap");
+        console.log("x",x)
+        console.log("y",y)
+} 
+    function reversenumber(){
+    let n = Number (prompt("Enter a number: "));
+        let reverse = 0;
+        let remainder;
+
+        while (n > 0){
+            remainder = n % 10;
+            reverse = reverse * 10 + remainder;
+            n = (n / 10)|0;
+        }
+        
+        console.log("reverse",reverse);
+    }
+    function checkpalindromenumber(){
+    let n = Number (prompt("Enter a number"));
+        let reverse = 0;
+        let remainder;
+        temp = n;
+
+        while (n > 0){
+        remainder = n % 10;
+        reverse = reverse * 10 + remainder;
+        n = (n / 10)|0;
+        }
+
+        if (temp == reverse){
+            console.log("yes",reverse);
+        }else{
+             console.log("no",reverse);
+        }
+    }
+     function simpleInterest(){
+     let principal = Number(prompt("Enter principal amount:"));
+        let rate = Number(prompt("Enter rate of interest (%):"));
+        let time = Number(prompt("Enter the time (years):"));
+
+        let SimpleInterest = (principal * rate * time) / 100;
+
+        document.write("Principal = " + principal+"<br>");
+        document.write("Rate = " + rate+"<br>");
+        document.write("Time = " + time+"<br>");
+        document.write("Simple Interest = " + SimpleInterest);
+     }
+      function fahrenheit(){
+      let Celsius = Number (prompt("Enter the temperature in celsius:"));
+        let Fahrenheit;
+
+        Fahrenheit = (9 * Celsius) / 5 + 32;
+
+        document.write("Fahrenheit =" + Fahrenheit +"<br>");
+      }
+
+      function Voting(){
+       let age = Number (prompt("Enter your age:"));
+
+        if (age >= 18){
+        document.write("Eligible for Voting ");
+
+        }else{
+            let yearsleft = 18 - age;
+
+            document.write("Not Eligible for Voting" + "<br>");
+            document.write("Years Left: " + yearsleft);
+        }
+    }
+    function BMI(){
+      let weight = Number (prompt("Enter your weight in kg:"));
+        let height = Number (prompt("Enter your height in meters:"));
+
+        let BMI = weight / (height * height);
+
+        document.write("Your BMI is: " + BMI.toFixed(2) + "<br>");
+
+        if(BMI < 18.5){
+            document.write("Underweight");
+
+        }else if (BMI >= 18.5 && BMI < 25) {
+            document.write("Normal");
+
+        }else if (BMI >= 25 && BMI < 30){
+            document.write("Overweight");
+
+        }else{
+            document.write("Obese");
+        }
+    }
+
+    </script>
+    <button onclick="operator()">Check Operator</button>
+    <button onclick="oddEven()">Check odd even</button>
+    <button onclick="checkGrade()">Check Grade</button>
+    <button onclick="largernumber()">Check larger number</button>
+    <button onclick="swapnumber()">Swap the numbers</button>
+    <button onclick="reversenumber()">Reverse the number</button>
+    <button onclick="checkpalindromenumber">Check Palindrome Number</button>
+    <button onclick="simpleInterest()">Calculate SimpleInterest</button>
+    <button onclick="fahrenheit()">Calculate Fahrenheit</button>
+    <button onclick="Voting()">Check Eligibility for Voting</button>
+    <button onclick="BMI()">BMI</button>
+</body>
+</html>
