@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function car (brand,colour,model,year){
+
+            this.Brand = brand;
+            this.Colour = colour;
+            this.Model = model;
+            this.Year = year;
+
+
+            this.description = function() {
+                return this.Brand + " " + this.Colour + " " + this.Model + " " + this.Year;
+             };
+        }
+        let car1 = new car("BMW", "Black", "X5", 2023);
+
+        console.log(car1.description());
+    </script>
+</body>
+</html>
