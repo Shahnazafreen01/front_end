@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const student = {
+            firstName: "Shahnaz",
+            middleName: "Afreen",
+            lastName: "Khan",
+
+            //Getter
+            get fullName(){
+                return this.firstName + " " + this.middleName + " " + this.lastName;
+            },
+
+            //Setter
+            set fullName(name) {
+                const parts = name.split(" ");
+                this.firstName = parts[0];
+                this.middleName = parts[1];
+                this.lastName = parts[2];
+
+            }
+
+        }
+        console.log(student.fullName);
+        student.fullName = "Shahnaz Khan Afreen";
+        console.log(student.fullName);
+        console.log(student.firstName);
+        console.log(student.lastName);
+    </script>
+</body>
+</html>
