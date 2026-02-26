@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="a">
+        <h1 id="b">abc</h1>
+        <h1 id="c">def</h1>
+    </div>
+
+
+    <script>
+        alert(document.getElementById('a').parentElement.nodeName);
+        alert(document.getElementById('a').firstElementChild.textContent);
+        alert(document.getElementById('a').lastElementChild.textContent);
+    </script>
+</body>
+</html>
