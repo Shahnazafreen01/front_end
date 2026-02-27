@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background: linear-gradient(135deg,#4f9edc,#2d6fb9);
+overflow:hidden;
+}
+
+/* background shapes */
+
+body::before{
+content:"";
+position:absolute;
+width:400px;
+height:400px;
+background:rgba(255,255,255,0.15);
+border-radius:50%;
+top:-120px;
+right:-120px;
+}
+
+body::after{
+content:"";
+position:absolute;
+width:350px;
+height:350px;
+background:rgba(255,255,255,0.1);
+border-radius:50%;
+bottom:-120px;
+left:-120px;
+}
+
+/* glass card */
+
+.container{
+width:340px;
+padding:40px;
+border-radius:20px;
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(15px);
+box-shadow:0 20px 40px rgba(0,0,0,0.3);
+text-align:center;
+color:white;
+z-index:1;
+}
+
+/* title */
+
+h2{
+margin-bottom:25px;
+font-size:28px;
+letter-spacing:1px;
+}
+
+/* inputs */
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:8px;
+font-size:16px;
+outline:none;
+background:rgba(255,255,255,0.8);
+}
+
+/* buttons */
+
+button{
+width:100%;
+padding:12px;
+margin-top:12px;
+border:none;
+border-radius:8px;
+background:#0c3d6f;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#062c52;
+transform:scale(1.05);
+box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>🌡 Converter</h2>
+
+<input id="c" type="number" placeholder="Enter Celsius" oninput="Fahrenheit()">
+
+<input id="f" type="number" placeholder="Enter Fahrenheit" oninput="Celsius()" >
+
+</div>
+
+    <script>
+       function Fahrenheit(){
+            let c = document.getElementById("c").value;
+            let f = document.getElementById("f").value;
+             f = (c * 9 / 5) + 32;
+            document.getElementById("f").value = f;
+        }
+
+        function Celsius(){
+            let f = document.getElementById("f").value;
+            let c = document.getElementById("c").value;
+             c = (f - 32) * 5 / 9;
+            document.getElementById("c").value = c;
+        }
+        
+        
+    </script>
+</body>
+</html>
