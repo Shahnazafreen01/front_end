@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="counter">0</h2>
+
+<button id="startBtn">Start</button>
+<button id="stopBtn">Stop</button>
+
+<script>
+    let count = 0;
+    let intervalId;
+
+    function startCounter() {
+        intervalId = setInterval(function() {
+            count++;
+            document.getElementById("counter").innerText = count;
+        }, 2000);
+    }
+
+    function stopCounter() {
+        clearInterval(intervalId);
+    }
+
+    // Add event
+    document.getElementById("startBtn").addEventListener("click", startCounter);
+
+    // Remove event
+    document.getElementById("stopBtn").addEventListener("click", function() {
+        stopCounter();
+        document.getElementById("startBtn").removeEventListener("click", startCounter);
+    });
+</script>
+
+</body>
+</html>
