@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-time Form Validation</title>
+</head>
+<body>
+
+<form id="myform">
+    Name: <input type="text" id="name">
+    <span id="nameError" style="color:red;"></span><br><br>
+
+    Email: <input type="text" id="email">
+    <span id="emailError" style="color:red;"></span><br><br>
+
+    Password: <input type="password" id="password">
+    <span id="passError" style="color:red;"></span><br><br>
+
+    Confirm Password: <input type="password" id="confirm">
+    <span id="confirmError" style="color:red;"></span><br><br>
+
+    Mobile: <input type="text" id="mobile">
+    <span id="mobileError" style="color:red;"></span><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+let nameInput = document.getElementById("name");
+let emailInput = document.getElementById("email");
+let passInput = document.getElementById("password");
+let confirmInput = document.getElementById("confirm");
+let mobileInput = document.getElementById("mobile");
+let form = document.getElementById("myform");
+
+nameInput.addEventListener("input", function() {
+    let name = nameInput.value;
+    if (name === "") {
+        document.getElementById("nameError").innerText = "Required";
+    } 
+    else if (/\d/.test(name)) {
+        document.getElementById("nameError").innerText = "No numbers allowed";
+    } 
+    else {
+        document.getElementById("nameError").innerText = "";
+    }
+});
+
+
+emailInput.addEventListener("input", function() {
+    let email = emailInput.value;
+    if (!email.includes("@")) {
+        document.getElementById("emailError").innerText = "Invalid email";
+    } else {
+        document.getElementById("emailError").innerText = "";
+    }
+});
+
+
+passInput.addEventListener("input", function() {
+    let pass = passInput.value;
+    if (pass.length < 6) {
+        document.getElementById("passError").innerText = "Min 6 characters";
+    } else {
+        document.getElementById("passError").innerText = "";
+    }
+});
+
+
+confirmInput.addEventListener("input", function() {
+    if (confirmInput.value !== passInput.value) {
+        document.getElementById("confirmError").innerText = "Not matching";
+    } else {
+        document.getElementById("confirmError").innerText = "";
+    }
+});
+
+
+mobileInput.addEventListener("input", function() {
+    let mobile = mobileInput.value;
+    if (mobile.length != 10 || isNaN(mobile)) {
+        document.getElementById("mobileError").innerText = "Invalid number";
+    } else {
+        document.getElementById("mobileError").innerText = "";
+    }
+});
+
+
+form.addEventListener("submit", function(e) {
+    if (
+        document.getElementById("nameError").innerText !== "" ||
+        document.getElementById("emailError").innerText !== "" ||
+        document.getElementById("passError").innerText !== "" ||
+        document.getElementById("confirmError").innerText !== "" ||
+        document.getElementById("mobileError").innerText !== ""
+    ) {
+        e.preventDefault();
+        alert("Please fix errors before submitting");
+    }
+});
+</script>
+
+</body>
+</html>

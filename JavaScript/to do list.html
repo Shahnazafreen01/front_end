@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-Do List</title>
+</head>
+<body>
+
+    <h2>To-Do List</h2>
+
+    <input type="text" id="taskInput" placeholder="Enter task">
+    <button id="addBtn">Add</button>
+
+    <ul id="taskList"></ul>
+
+    <script>
+        let addBtn = document.getElementById("addBtn");
+        let taskInput = document.getElementById("taskInput");
+        let taskList = document.getElementById("taskList");
+
+        addBtn.addEventListener("click",function () {
+            let taskText = taskInput.value;
+
+            if (taskText === "") {
+                alert("Enter a task first");
+                return;
+            }
+
+            let li = document.createElement("li");
+
+            let checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+
+            checkbox.addEventListener("change",function (){
+                if (this.checked) {
+                    li.style.textDecoration = "line-through";
+                }else{
+                    li.style.textDecoration = "none";
+                }
+            });
+
+            let text = document.createTextNode(" " + taskText);
+
+            let deleteBtn = document.createElement("button");
+            deleteBtn.innerText = "Delete";
+
+            deleteBtn.addEventListener("click", function () {
+                taskList.removeChild(li);
+            });
+
+            li.appendChild(checkbox);
+            li.appendChild(text);
+            li.appendChild(deleteBtn);
+
+            taskList.appendChild(li);
+
+            taskInput.value = "";
+        });
+        
+    </script>
+    
+</body>
+</html>
