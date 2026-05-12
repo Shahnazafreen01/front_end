@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers = [4, 9, 16, 25];
+        
+        console.log(numbers.map(Math.sqrt));
+
+        let p = (a) => {
+            return a * 5;
+        }
+        let arr = [2, 5, 6, 7, 3];
+        console.log(arr.map(p));
+
+        let values = [1,2,3,4,5,6,7,8,9];
+
+        console.log(values);
+
+        function checkEven(num){
+            return num % 2 == 0;
+        }
+
+        let evenNumbers = values.filter(checkEven);
+
+        console.log(evenNumbers);
+
+        console.log(checkEven(4));
+        console.log(checkEven(5));
+    </script>
+</body>
+</html>
